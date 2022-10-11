@@ -8,8 +8,8 @@ public class Main {
     public static void main(String[] args) {
         int[][] table = new int[reserves + 1][need + 1];
         int[][] prices = new int[reserves][need];
-        File input = new File("D:\\AntonGit\\LabsAntonAndrew\\Оптимизация проектных решений\\Lab2NorthWestCorner\\out\\production\\Lab2NorthWestCorner" + "\\input.txt");
-        //File input = new File(System.getProperty("java.class.path") + "\\input.txt");
+        //File input = new File("D:\\AntonGit\\LabsAntonAndrew\\Оптимизация проектных решений\\Lab2NorthWestCorner\\out\\production\\Lab2NorthWestCorner" + "\\input.txt");
+        File input = new File(System.getProperty("java.class.path") + "\\input.txt");
         inputValue(table, prices, input);
         printTable(table);
         startCornerAlg(1,1,table);
