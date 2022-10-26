@@ -76,9 +76,9 @@ df = pandas.DataFrame({
     'R': [R[i] for i in range(len(letterClass))],
     'u': [u[i] for i in range(len(letterClass))],
     ' ': [' ' for i in range(len(letterClass))],
-    'u(S)': [uS[i] for i in range(len(letterClass))],
-    'u(Э)': [uЭ[i] for i in range(len(letterClass))],
-    'u(L)': [uL[i] for i in range(len(letterClass))]
+    'u(R)': [uS[i] for i in range(len(letterClass))],
+    'u(T)': [uЭ[i] for i in range(len(letterClass))],
+    'u(Q)': [uL[i] for i in range(len(letterClass))]
 })
 
 writer = pandas.ExcelWriter('data.xlsx', engine='xlsxwriter')
