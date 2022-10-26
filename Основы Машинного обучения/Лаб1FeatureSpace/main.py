@@ -5,7 +5,8 @@ import matplotlib.pyplot as plt
 from statistics import mean
 
 table = pd.read_excel('data.xlsx')
-objectTypes = table.values[:, 2]
+objectTypes = table.values[:, 3]
+print(objectTypes)
 j = 0
 R = []
 u = []
@@ -16,16 +17,16 @@ letterClass = table['class'].tolist()
 
 for i in objectTypes:
     if i == 0:
-        Rx = table.values[j, 0]
-        Ry = table.values[j, 1]
+        Rx = table.values[j, 1]
+        Ry = table.values[j, 2]
         plt.plot(Rx, Ry, 'ro')
     if i == 1:
-        Tx = table.values[j, 0]
-        Ty = table.values[j, 1]
+        Tx = table.values[j, 1]
+        Ty = table.values[j, 2]
         plt.plot(Tx, Ty, 'bo')
     if i == 2:
-        Qx = table.values[j, 0]
-        Qy = table.values[j, 1]
+        Qx = table.values[j, 1]
+        Qy = table.values[j, 2]
         plt.plot(Qx, Qy, 'yo')
     j = j + 1
 plt.axis([0, 5, 0, 5])
