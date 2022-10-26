@@ -68,6 +68,8 @@ for i in objectTypes:
 
 
 df = pd.DataFrame({
+    'Node': [nodeArray[i] for i in range(len(letterClass))],
+    'end': [endArray[i] for i in range(len(letterClass))],
     'class': [letterClass[i] for i in range(len(objectTypes))],
     'R': [R[i] for i in range(len(objectTypes))],
     'u': [u[i] for i in range(len(objectTypes))],
