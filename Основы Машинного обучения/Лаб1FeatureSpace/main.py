@@ -1,86 +1,87 @@
-# import libraries
-import math
-import pandas as pd
-import matplotlib.pyplot as plt
 from statistics import mean
+from matplotlib import pyplot
+import pandas
+import math
 
-table = pd.read_excel('data.xlsx')
-objectTypes = table.values[:, 3]
-print(objectTypes)
-j = 0
+data = pandas.read_excel(
+    'data.xlsx', sheet_name='Sheet1')
+
+Nn = data['Node'].tolist()
+Nk = data['end'].tolist()
+letterClass = data['class'].tolist()
+
+letter = ['R', 'T', 'Q']
+i = 0
+unknown = 0
+while i < len(Nn):
+    if letterClass[i] == letter[0]:
+        pyplot.scatter(Nn[i], Nk[i], color='y')
+    elif letterClass[i] == letter[1]:
+        pyplot.scatter(Nn[i], Nk[i], color='g')
+    elif letterClass[i] == letter[2]:
+        pyplot.scatter(Nn[i], Nk[i], color='r')
+    elif letterClass[i] == ' ':
+        unknown += 1
+        pyplot.scatter(Nn[i], Nk[i], color='r')
+    i += 1
+
+if unknown != 0:
+    i = 0
+else:
+    pyplot.show()
+    raise SystemExit
+
 R = []
 u = []
 u1 = []
 u2 = []
 u3 = []
-letterClass = table['class'].tolist()
 
-for i in objectTypes:
-    if i == 0:
-        Rx = table.values[j, 1]
-        Ry = table.values[j, 2]
-        plt.plot(Rx, Ry, 'ro')
-    if i == 1:
-        Tx = table.values[j, 1]
-        Ty = table.values[j, 2]
-        plt.plot(Tx, Ty, 'bo')
-    if i == 2:
-        Qx = table.values[j, 1]
-        Qy = table.values[j, 2]
-        plt.plot(Qx, Qy, 'yo')
-    j = j + 1
-plt.axis([0, 5, 0, 5])
-
-# Lab2
-
-nodeArray = table['Node'].tolist()
-endArray = table['end'].tolist()
-
-for i in objectTypes:
-    R.append(math.sqrt(
-        (nodeArray[len(nodeArray) - 1] - nodeArray[i]) ** 2 + (endArray[len(nodeArray) - 1] - endArray[i]) ** 2))
+while i < len(Nn):
+    R.append(math.sqrt((Nn[len(Nn) - 1] - Nn[i]) ** 2 + (Nk[len(Nn) - 1] - Nk[i]) ** 2))
     u.append(1 / (1 + R[i] ** 2))
-    if i == 0:
-        print(0)
+
+    if letterClass[i] == letter[0]:
         u1.append(u[i])
-    elif i == 1:
-        print(1)
+    elif letterClass[i] == letter[1]:
         u2.append(u[i])
-    elif i == 2:
-        print(2)
+    elif letterClass[i] == letter[2]:
         u3.append(u[i])
 
-uR = [mean(u1)]
-uT = [mean(u2)]
-uQ = [mean(u3)]
+    i += 1
 
-print(letterClass)
+uS = [mean(u1)]
+uЭ = [mean(u2)]
+uL = [mean(u3)]
 
-for i in objectTypes:
-    if (uR > uT) and (uR > uQ):
-        letterClass[i - 1] = 0
-    elif (uQ > uT) and (uQ > uR):
-        letterClass[i - 1] = 1
-    elif (uT > uQ) and (uT > uR):
-        letterClass[i - 1] = 2
-    uR.append(' ')
-    uT.append(' ')
-    uQ.append(' ')
+if (uS > uЭ) and (uS > uL):
+    letterClass[i - 1] = 'R'
+elif (uL > uЭ) and (uL > uS):
+    letterClass[i - 1] = 'T'
+elif (uЭ > uL) and (uЭ > uS):
+    letterClass[i - 1] = 'Q'
 
+i = 0
 
-df = pd.DataFrame({
-    'Node': [nodeArray[i] for i in range(len(letterClass))],
-    'end': [endArray[i] for i in range(len(letterClass))],
-    'class': [letterClass[i] for i in range(len(objectTypes))],
-    'R': [R[i] for i in range(len(objectTypes))],
-    'u': [u[i] for i in range(len(objectTypes))],
-    ' ': [' ' for i in range(len(objectTypes))],
-    'u (R)': [uR[i] for i in range(len(letterClass))],
-    'u (T)': [uT[i] for i in range(len(objectTypes))],
-    'u (Q)': [uQ[i] for i in range(len(objectTypes))]
+while i < len(Nn) - 1:
+    uS.append(' ')
+    uЭ.append(' ')
+    uL.append(' ')
+    i += 1
+
+df = pandas.DataFrame({
+    'Node': [Nn[i] for i in range(len(letterClass))],
+    'end': [Nk[i] for i in range(len(letterClass))],
+    'class': [letterClass[i] for i in range(len(letterClass))],
+    'R': [R[i] for i in range(len(letterClass))],
+    'u': [u[i] for i in range(len(letterClass))],
+    ' ': [' ' for i in range(len(letterClass))],
+    'u(S)': [uS[i] for i in range(len(letterClass))],
+    'u(Э)': [uЭ[i] for i in range(len(letterClass))],
+    'u(L)': [uL[i] for i in range(len(letterClass))]
 })
 
-writer = pd.ExcelWriter('data.xlsx', engine='xlsxwriter')
+writer = pandas.ExcelWriter('data.xlsx', engine='xlsxwriter')
 df.to_excel(writer)
 
 workbook = writer.book
@@ -103,4 +104,4 @@ chart.add_series({
 worksheet.insert_chart('H6', chart)
 writer.save()
 
-plt.show()
+pyplot.show()
