@@ -3,26 +3,30 @@ from matplotlib import pyplot
 import pandas
 import math
 
-data = pandas.read_excel(
-    'data.xlsx', sheet_name='Sheet1')
+data = pandas.read_excel('data.xlsx', sheet_name='Sheet1')
 
-Nn = data['Node'].tolist()
-Nk = data['end'].tolist()
-letterClass = data['class'].tolist()
+arrayNode = data['Node'].tolist()
+arrayEnd = data['end'].tolist()
+objectType = data['class'].tolist()
+R = []
+u = []
+u1 = []
+u2 = []
+u3 = []
 
-letter = ['R', 'T', 'Q']
+object = ['R', 'T', 'Q']
 i = 0
 unknown = 0
-while i < len(Nn):
-    if letterClass[i] == letter[0]:
-        pyplot.scatter(Nn[i], Nk[i], color='y')
-    elif letterClass[i] == letter[1]:
-        pyplot.scatter(Nn[i], Nk[i], color='g')
-    elif letterClass[i] == letter[2]:
-        pyplot.scatter(Nn[i], Nk[i], color='r')
-    elif letterClass[i] == ' ':
+while i < len(arrayNode):
+    if objectType[i] == object[0]:
+        pyplot.scatter(arrayNode[i], arrayEnd[i], color='b')
+    elif objectType[i] == object[1]:
+        pyplot.scatter(arrayNode[i], arrayEnd[i], color='c')
+    elif objectType[i] == object[2]:
+        pyplot.scatter(arrayNode[i], arrayEnd[i], color='k')
+    elif objectType[i] == ' ':
         unknown += 1
-        pyplot.scatter(Nn[i], Nk[i], color='r')
+        pyplot.scatter(arrayNode[i], arrayEnd[i], color='r')
     i += 1
 
 if unknown != 0:
@@ -31,54 +35,49 @@ else:
     pyplot.show()
     raise SystemExit
 
-R = []
-u = []
-u1 = []
-u2 = []
-u3 = []
+while i < len(arrayNode):
+    R.append(math.sqrt((arrayNode[len(arrayNode) - 1] - arrayNode[i]) ** 2 +
+                       (arrayEnd[len(arrayNode) - 1] - arrayEnd[i]) ** 2))  # math radius
+    u.append(1 / (1 + R[i] ** 2))  # fi(x,1) = 1/1+r^2
 
-while i < len(Nn):
-    R.append(math.sqrt((Nn[len(Nn) - 1] - Nn[i]) ** 2 + (Nk[len(Nn) - 1] - Nk[i]) ** 2))
-    u.append(1 / (1 + R[i] ** 2))
-
-    if letterClass[i] == letter[0]:
+    if objectType[i] == object[0]:
         u1.append(u[i])
-    elif letterClass[i] == letter[1]:
+    elif objectType[i] == object[1]:
         u2.append(u[i])
-    elif letterClass[i] == letter[2]:
+    elif objectType[i] == object[2]:
         u3.append(u[i])
 
     i += 1
 
-uS = [mean(u1)]
-uЭ = [mean(u2)]
-uL = [mean(u3)]
+uR = [mean(u1)]
+uT = [mean(u2)]
+uQ = [mean(u3)]
 
-if (uS > uЭ) and (uS > uL):
-    letterClass[i - 1] = 'R'
-elif (uL > uЭ) and (uL > uS):
-    letterClass[i - 1] = 'T'
-elif (uЭ > uL) and (uЭ > uS):
-    letterClass[i - 1] = 'Q'
+if (uR > uT) and (uR > uQ):
+    objectType[i - 1] = 'R'
+elif (uQ > uT) and (uQ > uR):
+    objectType[i - 1] = 'T'
+elif (uT > uQ) and (uT > uR):
+    objectType[i - 1] = 'Q'
 
 i = 0
 
-while i < len(Nn) - 1:
-    uS.append(' ')
-    uЭ.append(' ')
-    uL.append(' ')
+while i < len(arrayNode) - 1:
+    uR.append(' ')
+    uT.append(' ')
+    uQ.append(' ')
     i += 1
 
 df = pandas.DataFrame({
-    'Node': [Nn[i] for i in range(len(letterClass))],
-    'end': [Nk[i] for i in range(len(letterClass))],
-    'class': [letterClass[i] for i in range(len(letterClass))],
-    'R': [R[i] for i in range(len(letterClass))],
-    'u': [u[i] for i in range(len(letterClass))],
-    ' ': [' ' for i in range(len(letterClass))],
-    'u(R)': [uS[i] for i in range(len(letterClass))],
-    'u(T)': [uЭ[i] for i in range(len(letterClass))],
-    'u(Q)': [uL[i] for i in range(len(letterClass))]
+    'Node': [arrayNode[i] for i in range(len(objectType))],
+    'end': [arrayEnd[i] for i in range(len(objectType))],
+    'class': [objectType[i] for i in range(len(objectType))],
+    'R': [R[i] for i in range(len(objectType))],
+    'u': [u[i] for i in range(len(objectType))],
+    ' ': [' ' for i in range(len(objectType))],
+    'u(R)': [uR[i] for i in range(len(objectType))],
+    'u(T)': [uT[i] for i in range(len(objectType))],
+    'u(Q)': [uQ[i] for i in range(len(objectType))]
 })
 
 writer = pandas.ExcelWriter('data.xlsx', engine='xlsxwriter')
