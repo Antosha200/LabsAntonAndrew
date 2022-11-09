@@ -1,0 +1,16 @@
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab1\bin\Debug\bntu.vsrpp.akutsak.lab1.exe.config
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab1\bin\Debug\bntu.vsrpp.akutsak.lab1.exe
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab1\bin\Debug\bntu.vsrpp.akutsak.lab1.pdb
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab1\bin\Debug\bntu.vsrpp.akutsak.core.dll
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab1\bin\Debug\Newtonsoft.Json.dll
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab1\bin\Debug\bntu.vsrpp.akutsak.core.pdb
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab1\bin\Debug\Newtonsoft.Json.xml
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab1\obj\Debug\bntu.vsrpp.ANaumov.lab1.csproj.AssemblyReference.cache
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab1\obj\Debug\bntu.vsrpp.ANaumov.lab1.csproj.SuggestedBindingRedirects.cache
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab1\obj\Debug\Bntu.Vsrpp.Akutsak.lab1.XMLParser.resources
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab1\obj\Debug\bntu.vsrpp.akutsak.lab1.Properties.Resources.resources
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab1\obj\Debug\bntu.vsrpp.ANaumov.lab1.csproj.GenerateResource.cache
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab1\obj\Debug\bntu.vsrpp.ANaumov.lab1.csproj.CoreCompileInputs.cache
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab1\obj\Debug\bntu.vsrpp.ANaumov.lab1.csproj.CopyComplete
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab1\obj\Debug\bntu.vsrpp.akutsak.lab1.exe
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab1\obj\Debug\bntu.vsrpp.akutsak.lab1.pdb
