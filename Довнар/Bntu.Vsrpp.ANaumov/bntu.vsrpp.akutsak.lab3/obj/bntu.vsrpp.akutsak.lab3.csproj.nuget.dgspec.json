@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Учёба\\4 курс\\LabsAntonAndrew\\Довнар\\Bntu.Vsrpp.ANaumov\\bntu.vsrpp.akutsak.lab3\\bntu.vsrpp.akutsak.lab3.csproj": {}
+  },
+  "projects": {
+    "D:\\Учёба\\4 курс\\LabsAntonAndrew\\Довнар\\Bntu.Vsrpp.ANaumov\\bntu.vsrpp.akutsak.lab3\\bntu.vsrpp.akutsak.lab3.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Учёба\\4 курс\\LabsAntonAndrew\\Довнар\\Bntu.Vsrpp.ANaumov\\bntu.vsrpp.akutsak.lab3\\bntu.vsrpp.akutsak.lab3.csproj",
+        "projectName": "bntu.vsrpp.akutsak.lab3",
+        "projectPath": "D:\\Учёба\\4 курс\\LabsAntonAndrew\\Довнар\\Bntu.Vsrpp.ANaumov\\bntu.vsrpp.akutsak.lab3\\bntu.vsrpp.akutsak.lab3.csproj",
+        "packagesPath": "C:\\Users\\Antosha\\.nuget\\packages\\",
+        "outputPath": "D:\\Учёба\\4 курс\\LabsAntonAndrew\\Довнар\\Bntu.Vsrpp.ANaumov\\bntu.vsrpp.akutsak.lab3\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Antosha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {
+              "D:\\Учёба\\4 курс\\LabsAntonAndrew\\Довнар\\Bntu.Vsrpp.ANaumov\\ClassLibrary1\\bntu.vsrpp.ANaumov.core.csproj": {
+                "projectPath": "D:\\Учёба\\4 курс\\LabsAntonAndrew\\Довнар\\Bntu.Vsrpp.ANaumov\\ClassLibrary1\\bntu.vsrpp.ANaumov.core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.2, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.16.1, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Учёба\\4 курс\\LabsAntonAndrew\\Довнар\\Bntu.Vsrpp.ANaumov\\ClassLibrary1\\bntu.vsrpp.ANaumov.core.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Учёба\\4 курс\\LabsAntonAndrew\\Довнар\\Bntu.Vsrpp.ANaumov\\ClassLibrary1\\bntu.vsrpp.ANaumov.core.csproj",
+        "projectName": "bntu.vsrpp.ANaumov.core",
+        "projectPath": "D:\\Учёба\\4 курс\\LabsAntonAndrew\\Довнар\\Bntu.Vsrpp.ANaumov\\ClassLibrary1\\bntu.vsrpp.ANaumov.core.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    }
+  }
+}

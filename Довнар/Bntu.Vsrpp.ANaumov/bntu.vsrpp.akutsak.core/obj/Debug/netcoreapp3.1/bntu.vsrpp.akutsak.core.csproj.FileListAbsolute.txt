@@ -1,0 +1,8 @@
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.core\bin\Debug\netcoreapp3.1\bntu.vsrpp.akutsak.core.deps.json
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.core\bin\Debug\netcoreapp3.1\bntu.vsrpp.akutsak.core.dll
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.core\bin\Debug\netcoreapp3.1\bntu.vsrpp.akutsak.core.pdb
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.core\obj\Debug\netcoreapp3.1\bntu.vsrpp.akutsak.core.csprojAssemblyReference.cache
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.core\obj\Debug\netcoreapp3.1\bntu.vsrpp.akutsak.core.AssemblyInfoInputs.cache
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.core\obj\Debug\netcoreapp3.1\bntu.vsrpp.akutsak.core.AssemblyInfo.cs
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.core\obj\Debug\netcoreapp3.1\bntu.vsrpp.akutsak.core.dll
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.core\obj\Debug\netcoreapp3.1\bntu.vsrpp.akutsak.core.pdb

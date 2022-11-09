@@ -1,0 +1,33 @@
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.lab2\bin\Debug\bntu.vsrpp.akutsak.lab2.exe.config
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.lab2\bin\Debug\bntu.vsrpp.akutsak.lab2.exe
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.lab2\bin\Debug\bntu.vsrpp.akutsak.lab2.pdb
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.CurrenciesParser.resources
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.Properties.Resources.resources
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.csproj.GenerateResource.cache
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.exe
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.pdb
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.lab2\bin\Debug\Newtonsoft.Json.dll
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.lab2\bin\Debug\Newtonsoft.Json.xml
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.csproj.AssemblyReference.cache
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.csproj.CoreCompileInputs.cache
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.ChartBuilder.resources
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.csproj.CopyComplete
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.lab2\bin\Debug\bntu.vsrpp.akutsak.core.dll
+D:\VSprojects\bntu.vsrpp.akutsak\bntu.vsrpp.akutsak.lab2\bin\Debug\bntu.vsrpp.akutsak.core.pdb
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\bin\Debug\bntu.vsrpp.akutsak.lab2.exe.config
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\bin\Debug\bntu.vsrpp.akutsak.lab2.exe
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\bin\Debug\bntu.vsrpp.akutsak.lab2.pdb
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\bin\Debug\bntu.vsrpp.akutsak.core.dll
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\bin\Debug\Newtonsoft.Json.dll
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\bin\Debug\bntu.vsrpp.akutsak.core.pdb
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\bin\Debug\Newtonsoft.Json.xml
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.csproj.AssemblyReference.cache
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.csproj.SuggestedBindingRedirects.cache
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\obj\Debug\Bntu.Vsrpp.Akutsak.Lab2.ChartBuilder.resources
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\obj\Debug\Bntu.Vsrpp.Akutsak.Lab2.CurrenciesParser.resources
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.Properties.Resources.resources
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.csproj.GenerateResource.cache
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.csproj.CoreCompileInputs.cache
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.csproj.CopyComplete
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.exe
+D:\Учёба\4 курс\LabsAntonAndrew\Довнар\Bntu.Vsrpp.ANaumov\bntu.vsrpp.akutsak.lab2\obj\Debug\bntu.vsrpp.akutsak.lab2.pdb
