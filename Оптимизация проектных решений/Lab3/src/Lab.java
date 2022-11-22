@@ -1,41 +1,26 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Lab {
 
-    public static final int K = 4;
-    static int T = 0;
-    static ArrayList<Arg> arguments = new ArrayList<>();
+    public static final int CRITERIA_COUNT = 4;
+    public static final boolean[] CRITERIA_MAX_MIN = {false, false, true, true};
+    public static ArgumentCriteriaMatrix argumentCriteriaMatrix;
+
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        T = in.nextInt();
-        for (int i = 0;i < T;i++)
-        {
-            int[] krit = new int[K];
-            for (int j = 0; j < K; j++)
-            {
-                krit[j] = in.nextInt();
-            }
-            arguments.add(new Arg(krit));
+
+        File file = new File("D:\\AntonGit\\LabsAntonAndrew\\Оптимизация проектных решений\\Lab3\\out\\production\\Lab3\\input.txt");
+        Scanner scanner;
+        try {
+            scanner = new Scanner(file);
+            argumentCriteriaMatrix = new ArgumentCriteriaMatrix(scanner);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
-        for (int i = 0; i < K ; i++)
-        {
-            int argIndex = 0;
-            int maxMin = arguments.get(0).getKrit()[i];
-            for (Arg arg:arguments) {
-                int krit = arg.getKrit()[i];
-                if (i<3 && krit < maxMin)
-                {
-                    argIndex = arguments.indexOf(arg);
-                    maxMin = krit;
-                }
-                else if (i>2 && krit > maxMin)
-                {
-                    argIndex = arguments.indexOf(arg);
-                    maxMin = krit;
-                }
-            }
-            arguments.get(argIndex).setAgree(false);
-        }
+        argumentCriteriaMatrix.printMatrix();
+
     }
 }
