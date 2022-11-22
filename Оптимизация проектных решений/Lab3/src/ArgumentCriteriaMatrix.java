@@ -158,7 +158,7 @@ public class ArgumentCriteriaMatrix {
                 {
                     if (j != mainCriteriaIndex)
                     {
-                        if (!((normalData[i][j] > Lab.RESTRICTION_AREA_MIN) && (normalData[i][j] < Lab.RESTRICTION_AREA_MAX)))
+                        if (!((normalData[i][j] >= Lab.RESTRICTION_AREA_MIN) && (normalData[i][j] <= Lab.RESTRICTION_AREA_MAX)))
                         {
                             approachRestrictionArea[i] = false;
                             break;
