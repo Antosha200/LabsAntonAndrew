@@ -6,6 +6,10 @@ public class ArgumentCriteriaMatrix {
     private double[][] normalData;
     private int argumentCount;
     private boolean[] compromises;
+    private double[] lambdas = Lab.LAMBDAS;
+    private boolean[] approachRestrictionArea;
+    private double[] byMainCriteria;
+    private int byMainCriteriaAnsIndex = -1;
     private boolean[] criteriaMaxMin = Lab.CRITERIA_MAX_MIN;
 
     public ArgumentCriteriaMatrix(Scanner scanner)
@@ -15,6 +19,8 @@ public class ArgumentCriteriaMatrix {
         data = new int[argumentCount][Lab.CRITERIA_COUNT];
         rotateData = new int[argumentCount][Lab.CRITERIA_COUNT];
         normalData = new double[argumentCount][Lab.CRITERIA_COUNT];
+        approachRestrictionArea = new boolean[argumentCount];
+        byMainCriteria = new double[argumentCount];
         for (int i = 0; i < argumentCount; i++)
         {
             for (int j = 0; j < Lab.CRITERIA_COUNT; j++)
@@ -22,11 +28,13 @@ public class ArgumentCriteriaMatrix {
                 data[i][j] = scanner.nextInt();
             }
             compromises[i] = false;
+            approachRestrictionArea[i] = false;
         }
         getMainValues();
         arrPareto();
         rotateUP();
         normalization();
+        byMainCriteria();
     }
 
     private void getMainValues()
@@ -128,6 +136,51 @@ public class ArgumentCriteriaMatrix {
         }
     }
 
+    private void byMainCriteria()
+    {
+        double mainCriteria = lambdas[0];
+        int mainCriteriaIndex = 0;
+        for (int i = 1; i < Lab.CRITERIA_COUNT; i++) {
+            if (mainCriteria<lambdas[i])
+            {
+                mainCriteria = lambdas[i];
+                mainCriteriaIndex = i;
+            }
+        }
+        double ans = 0;
+        for (int i = 0; i < argumentCount; i++)
+        {
+            if (compromises[i])
+            {
+                approachRestrictionArea[i] = true;
+                ans = normalData[i][mainCriteriaIndex];
+                for (int j = 0; j < Lab.CRITERIA_COUNT; j++)
+                {
+                    if (j != mainCriteriaIndex)
+                    {
+                        if (!((normalData[i][j] > Lab.RESTRICTION_AREA_MIN) && (normalData[i][j] < Lab.RESTRICTION_AREA_MAX)))
+                        {
+                            approachRestrictionArea[i] = false;
+                            break;
+                        }
+                    }
+                }
+            }
+            if (approachRestrictionArea[i])
+            {
+                byMainCriteria[i] = ans;
+                if (byMainCriteriaAnsIndex == -1)
+                {
+                    byMainCriteriaAnsIndex = i;
+                }
+                else if (byMainCriteria[byMainCriteriaAnsIndex] < ans)
+                {
+                    byMainCriteriaAnsIndex = i;
+                }
+            }
+        }
+    }
+
     public void printMatrix()
     {
         for (int i = 0; i < argumentCount; i++)
@@ -136,16 +189,16 @@ public class ArgumentCriteriaMatrix {
             {
                 System.out.printf("%5d",data[i][j]);
             }
-            System.out.print(" |");
+            System.out.print("  |");
             if (compromises[i])
             {
-                System.out.printf("%2s","K");
+                System.out.printf("%3s"," K");
             }
             else
             {
-                System.out.printf("%2s","C");
+                System.out.printf("%3s"," C");
             }
-            System.out.print(" |");
+            System.out.print("  |");
             for (int j = 0; j < Lab.CRITERIA_COUNT; j++)
             {
                 if (compromises[i])
@@ -157,7 +210,7 @@ public class ArgumentCriteriaMatrix {
                     System.out.print("     ");
                 }
             }
-            System.out.print(" |");
+            System.out.print("  |");
             for (int j = 0; j < Lab.CRITERIA_COUNT; j++)
             {
                 if (compromises[i])
@@ -166,9 +219,16 @@ public class ArgumentCriteriaMatrix {
                 }
                 else
                 {
-                    System.out.print("     ");
+                    System.out.print("      ");
                 }
             }
+            System.out.print("  |");
+            if (approachRestrictionArea[i]) {
+                System.out.printf("%6.2f", byMainCriteria[i]);
+            } else {
+                System.out.print("      ");
+            }
+            System.out.print("  |");
             System.out.println();
         }
     }
