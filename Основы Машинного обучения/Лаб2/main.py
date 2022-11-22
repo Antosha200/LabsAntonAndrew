@@ -27,9 +27,10 @@ while i < len(Nn):
 
 if unknown != 0:
     i = 0
-else:
+else: 
     pyplot.show()
     raise SystemExit
+
 
 R = []
 u = []
@@ -38,16 +39,8 @@ u2 = []
 u3 = []
 
 while i < len(Nn):
-    R.append(math.sqrt((Nn[len(Nn) - 1] - Nn[i]) ** 2 + (Nk[len(Nn) - 1] - Nk[i]) ** 2))
-    gg = Nn[len(Nn) - 1] - Nn[i] ** 2 + (Nk[len(Nn) - 1] - Nk[i]) ** 2
-    print(gg)
-    u.append(1 / (1 + R[i] ** 2))
-
-    if type(R[i]) != int or type(R[i]) != float:
-        print(1)
-
-    if type(u[i]) != int or type(u[i]) != float:
-        print(2)
+    R.append(math.sqrt((Nn[len(Nn)-1]-Nn[i])**2 + (Nk[len(Nn)-1]-Nk[i])**2))
+    u.append(1/(1+R[i]**2))
 
     if letterClass[i] == letter[0]:
         u1.append(u[i])
@@ -63,31 +56,31 @@ uЭ = [mean(u2)]
 uL = [mean(u3)]
 
 if (uS > uЭ) and (uS > uL):
-    letterClass[i - 1] = 'R'
+        letterClass[i-1]='R'
 elif (uL > uЭ) and (uL > uS):
-    letterClass[i - 1] = 'T'
+        letterClass[i-1]='T'
 elif (uЭ > uL) and (uЭ > uS):
-    letterClass[i - 1] = 'Q'
+        letterClass[i-1]='Q'
 
-i = 0
+i=0
 
-while i < len(Nn) - 1:
+while i < len(Nn)-1:
     uS.append(' ')
     uЭ.append(' ')
     uL.append(' ')
     i += 1
 
 df = pandas.DataFrame({
-    'uzel': [Nn[i] for i in range(len(letterClass))],
-    'konec': [Nk[i] for i in range(len(letterClass))],
-    'class': [letterClass[i] for i in range(len(letterClass))],
-    'R': [R[i] for i in range(len(letterClass))],
-    'u': [u[i] for i in range(len(letterClass))],
-    ' ': [' ' for i in range(len(letterClass))],
-    'u(R)': [uS[i] for i in range(len(letterClass))],
-    'u(T)': [uЭ[i] for i in range(len(letterClass))],
-    'u(Q)': [uL[i] for i in range(len(letterClass))]
-})
+                       'uzel': [Nn[i] for i in range(len(letterClass))],
+                       'konec': [Nk[i] for i in range(len(letterClass))],
+                       'class': [letterClass[i] for i in range(len(letterClass))],
+                       'R': [R[i] for i in range(len(letterClass))],
+                       'u': [u[i] for i in range(len(letterClass))],
+                       ' ': [' ' for i in range(len(letterClass))],
+                       'u(R)': [uS[i] for i in range(len(letterClass))],
+                       'u(T)': [uЭ[i] for i in range(len(letterClass))],
+                       'u(Q)': [uL[i] for i in range(len(letterClass))]
+                       })
 
 writer = pandas.ExcelWriter('Data.xlsx', engine='xlsxwriter')
 df.to_excel(writer)
@@ -98,15 +91,15 @@ worksheet = writer.sheets['Sheet1']
 chart = workbook.add_chart({'type': 'column'})
 chart.add_series({
     'values': '=\'Sheet1\'!$H$2',
-    "name": "u(S)"
+    "name": "u(R)"
 })
 chart.add_series({
     'values': '=\'Sheet1\'!$I$2',
-    "name": "u(Э)"
+    "name": "u(T)"
 })
 chart.add_series({
     'values': '=\'Sheet1\'!$J$2',
-    "name": "u(L)"
+    "name": "u(Q)"
 })
 
 worksheet.insert_chart('H6', chart)

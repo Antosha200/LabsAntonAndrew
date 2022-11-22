@@ -15,7 +15,8 @@ public class Lab {
 
     public static void main(String[] args) {
 
-        File file = new File("D:\\AntonGit\\LabsAntonAndrew\\Оптимизация проектных решений\\Lab3\\out\\production\\Lab3\\input.txt");
+        //File file = new File("D:\\AntonGit\\LabsAntonAndrew\\Оптимизация проектных решений\\Lab3\\out\\production\\Lab3\\input.txt");
+        File file = new File("D:\\Учёба\\4 курс\\LabsAntonAndrew\\Оптимизация проектных решений\\Lab3\\src\\input.txt");
         Scanner scanner;
         try {
             scanner = new Scanner(file);
