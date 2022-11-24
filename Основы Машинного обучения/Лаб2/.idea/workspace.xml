@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78221880-bc88-4ee5-8c1c-be056a3ba734" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Оптимизация проектных решений/Lab3/out/production/Lab3/ArgumentCriteriaMatrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Оптимизация проектных решений/Lab3/out/production/Lab3/ArgumentCriteriaMatrix.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Оптимизация проектных решений/Lab3/out/production/Lab3/Lab.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Оптимизация проектных решений/Lab3/out/production/Lab3/Lab.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Оптимизация проектных решений/Lab3/out/production/Lab3/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Оптимизация проектных решений/Lab3/out/production/Lab3/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Оптимизация проектных решений/Lab3/src/ArgumentCriteriaMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Оптимизация проектных решений/Lab3/src/ArgumentCriteriaMatrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Оптимизация проектных решений/Lab3/src/Lab.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Оптимизация проектных решений/Lab3/src/Lab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Лаб1FeatureSpace/.idea/FeatureSpace - ML Lab1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Лаб1FeatureSpace/.idea/FeatureSpace - ML Lab1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Лаб1FeatureSpace/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Лаб1FeatureSpace/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Лаб1FeatureSpace/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Лаб1FeatureSpace/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Оптимизация проектных решений/Lab3/src/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Оптимизация проектных решений/Lab3/src/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Otchet_lab2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Otchet_lab2.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +74,8 @@
       <workItem from="1669104573964" duration="661000" />
       <workItem from="1669105279563" duration="5000" />
       <workItem from="1669105345766" duration="666000" />
+      <workItem from="1669106250767" duration="10000" />
+      <workItem from="1669286586512" duration="6056000" />
     </task>
     <servers />
   </component>
@@ -86,8 +93,19 @@
       </map>
     </option>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/2$main.coverage" NAME="main Coverage Results" MODIFIED="1669105187294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/lab1_py$main.coverage" NAME="main Coverage Results" MODIFIED="1669105981345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lab1_py$main.coverage" NAME="main Coverage Results" MODIFIED="1669292547627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
