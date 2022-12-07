@@ -1,4 +1,5 @@
 import math
+from statistics import mean
 
 from PIL import Image, ImageDraw
 import numpy as np
@@ -13,6 +14,10 @@ Nh1 = lke['Nh1'].tolist()
 Nh2 = lke['Nh2'].tolist()
 Nv = lke['Nv'].tolist()
 letterClass = lke['class'].tolist()
+letter = ['first', 'second', 'third']
+u1 = []
+u2 = []
+u3 = []
 R = []
 u = []
 
@@ -121,18 +126,32 @@ for images in os.listdir():
         Nh2.append(h2)
         Nv.append(v)
         j = 0
+        p = 0
 
         for i in range(len(letterClass)):
             R.append(math.sqrt((Nh1[len(Nh1) - 1] - Nh1[i]) ** 2 + (Nh2[len(Nh1) - 1] - Nh2[i]) ** 2))
             u.append(1 / (1 + R[i] ** 2))
             j = j + 1
+            if letterClass[p] == letter[0]:
+                u1.append(u[p])
+            elif letterClass[p] == letter[1]:
+                u2.append(u[p])
+            elif letterClass[p] == letter[2]:
+                u3.append(u[p])
+            p += 1
 
         j = j - 1
         R.append(R[j])
         u.append(u[j])
 
-        ##
+        global uR
+        global uT
+        global uQ
+        uR = [mean(u1)]
+        uT = [mean(u2)]
+        uQ = [mean(u3)]
 
+        ##
         l = (Nh1[len(letterClass)] - Nh1[0]) ** 2 + (Nh2[len(letterClass)] - Nh2[0]) ** 2 + (
         Nv[len(letterClass)] - Nv[0]) ** 2
         lenght = [i for i in range(len(letterClass))]
@@ -162,7 +181,7 @@ for images in os.listdir():
                 if i != k[0]:
                     l = lenght[i]
                     k[1] = i
-                    print(k[1])
+                    #print(k[1])
             i += 1
 
         if k[0] != 0 and k[1] != 0:
@@ -181,7 +200,7 @@ for images in os.listdir():
                     l = lenght[i]
                     k[2] = i
             i += 1
-        print(k[0], k[1], k[2])
+        #print(k[0], k[1], k[2])
         letter = ["first", "second", "third"]
         l = len(Nh1) - 1
         f = s = th = 0
@@ -206,6 +225,8 @@ for images in os.listdir():
             ax.scatter(Nh1[l], Nh2[l], Nv[l], color='g')
             letterClass.append("third")
 
+        ##
+
         idraw.rectangle((0, 39, 50, 39), fill='blue')  # horizontal
         idraw.rectangle((0, 18, 50, 18), fill='purple')  # horizontal2
         idraw.rectangle((30, 0, 30, 17), fill='red')  # vertical
@@ -224,5 +245,16 @@ for images in os.listdir():
                            'u': [u[i] for i in range(len(letterClass))]})
 
         df.to_excel('data.xlsx', sheet_name='Лист1', index=False)
+
+        print('u(R) = ', uR)
+        print('u(T) = ', uT)
+        print('u(Q) = ', uQ)
+
+        vals = [uR[0], uT[0], uQ[0]]
+        labels = ["u(R)", "u(T)", "u(Q)"]
+
+        #fig, ax = plt.subplots()
+        #ax.pie(vals, labels=labels)
+        #ax.axis("equal")
 
 plt.show()
