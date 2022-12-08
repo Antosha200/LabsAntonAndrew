@@ -240,18 +240,17 @@ for images in os.listdir():
                            'Nh2': [Nh2[i] for i in range(0, len(letterClass))],
                            'Nv': [Nv[i] for i in range(0, len(letterClass))],
                            'class': [letterClass[i] for i in range(0, len(letterClass))],
-                           #'l': [lenght[i] for i in range(len(letterClass))],
                            'R': [R[i] for i in range(len(letterClass))],
                            'u': [u[i] for i in range(len(letterClass))]})
 
         df.to_excel('data.xlsx', sheet_name='Лист1', index=False)
 
-        print('u(R) = ', uR)
-        print('u(T) = ', uT)
-        print('u(Q) = ', uQ)
+        print('u(1) = ', uR)
+        print('u(2) = ', uT)
+        print('u(3) = ', uQ)
 
         vals = [uR[0], uT[0], uQ[0]]
-        labels = ["u(R)", "u(T)", "u(Q)"]
+        labels = ["u(1)", "u(2)", "u(3)"]
 
         #fig, ax = plt.subplots()
         #ax.pie(vals, labels=labels)
