@@ -4,6 +4,7 @@ public class ArgumentCriteriaMatrix {
     private int[][] data;
     private int[][] rotateData;
     private double[][] normalData;
+    private String[][] doubleData;
     private int argumentCount;
     private boolean[] compromises;
     private double[] lambdas = Lab.LAMBDAS;
@@ -19,6 +20,7 @@ public class ArgumentCriteriaMatrix {
         data = new int[argumentCount][Lab.CRITERIA_COUNT];
         rotateData = new int[argumentCount][Lab.CRITERIA_COUNT];
         normalData = new double[argumentCount][Lab.CRITERIA_COUNT];
+        doubleData = new String[argumentCount][argumentCount];
         approachRestrictionArea = new boolean[argumentCount];
         byMainCriteria = new double[argumentCount];
         for (int i = 0; i < argumentCount; i++)
@@ -35,6 +37,7 @@ public class ArgumentCriteriaMatrix {
         rotateUP();
         normalization();
         byMainCriteria();
+        doubleMethod();
     }
 
     private void getMainValues()
@@ -181,6 +184,36 @@ public class ArgumentCriteriaMatrix {
         }
     }
 
+    private void doubleMethod() {
+        for (int line1 = 0; line1 < argumentCount; line1++) {
+            for (int line2 = 0; line2 < argumentCount; line2++) {
+                if (line1 == line2)
+                {
+                    doubleData[line1][line2] = "NaN";
+                    continue;
+                }
+                double leftV = 0;
+                double rightV = 0;
+                for (int j = 0; j < Lab.CRITERIA_COUNT; j++)
+                {
+                    if ((criteriaMaxMin[j] && (data[line1][j] > data[line2][j])) || (!criteriaMaxMin[j] && (data[line1][j] < data[line2][j])))
+                    {
+                        leftV++;
+                    }
+                    else if (data[line1][j] == data[line2][j])
+                    {
+                        leftV += 0.5d;
+                        rightV += 0.5d;
+                    }
+                    else
+                    {
+                        rightV++;
+                    }
+                }
+                doubleData[line1][line2] = Double.toString(leftV) + "/" + Double.toString(rightV);
+            }
+        }
+    }
     public void printMatrix()
     {
         for (int i = 0; i < argumentCount; i++)
@@ -229,6 +262,10 @@ public class ArgumentCriteriaMatrix {
                 System.out.print("      ");
             }
             System.out.print("  |");
+            for (int j = 0; j < argumentCount; j++)
+            {
+                System.out.printf("%9s",doubleData[i][j]);
+            }
             System.out.println();
         }
     }

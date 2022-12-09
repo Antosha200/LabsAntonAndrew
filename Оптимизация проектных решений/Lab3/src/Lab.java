@@ -9,7 +9,7 @@ public class Lab {
     public static final int CRITERIA_COUNT = 4;
     public static final boolean[] CRITERIA_MAX_MIN = {false, false, true, true};
     public static final double[] LAMBDAS = {0.25, 0.25, 0.3, 0.2};
-    public static final double RESTRICTION_AREA_MIN = 0;
+    public static final double RESTRICTION_AREA_MIN = 0.25;
     public static final double RESTRICTION_AREA_MAX = 1;
     public static ArgumentCriteriaMatrix argumentCriteriaMatrix;
 
@@ -25,6 +25,5 @@ public class Lab {
             e.printStackTrace();
         }
         argumentCriteriaMatrix.printMatrix();
-
     }
 }
